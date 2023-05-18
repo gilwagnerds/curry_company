@@ -235,7 +235,7 @@ date_slider = st.sidebar.slider(                                                
       value=pd.datetime( 2022, 4, 13 ),                                           # value recebe a data padrão quando o usuário não definir nenhuma data
       min_value=pd.datetime(2022, 2, 11),                                         # Após consultado no df1, definimos a data minima para a consulta
       max_value=pd.datetime(2022, 4, 6),                                          # Após consultado no df1, definimos a data máxima para a consulta
-      format='DD-MM-YYYY' )                                                       # O format altera a forma em que a data será recebida e apresentada    
+      format='DD/MM/YYYY' )                                                       # O format altera a forma em que a data será recebida e apresentada    
 #st.header( date_slider )                                                         # A função st.header irá apresentar o valor da variável date_slider ao usuário
 st.sidebar.markdown( """---""" )                                                  # A função st.sidebar.markdown("""---""") vai determinar uma linha de separação
     
