@@ -232,9 +232,9 @@ st.sidebar.markdown( """---""" )                                                
 st.sidebar.markdown( '## Selecione uma data limite' )
 date_slider = st.sidebar.slider(                                                  # Função slider retornará uma data que deve ser guardada em uma variável.
       'Até qual valor?',
-      value=pd.datetime( 13, 4, 2022 ),                                           # value recebe a data padrão quando o usuário não definir nenhuma data
-      min_value=pd.datetime( 11, 2, 2022 ),                                         # Após consultado no df1, definimos a data minima para a consulta
-      max_value=pd.datetime( 4, 6, 2022 ),                                          # Após consultado no df1, definimos a data máxima para a consulta
+      value=pd.datetime( 2022, 4, 13 ),                                           # value recebe a data padrão quando o usuário não definir nenhuma data
+      min_value=pd.datetime( 2022, 2, 11 ),                                         # Após consultado no df1, definimos a data minima para a consulta
+      max_value=pd.datetime( 2022, 6, 4 ),                                          # Após consultado no df1, definimos a data máxima para a consulta
       format='DD/MM/YYYY' )                                                       # O format altera a forma em que a data será recebida e apresentada    
 #st.header( date_slider )                                                         # A função st.header irá apresentar o valor da variável date_slider ao usuário
 st.sidebar.markdown( """---""" )                                                  # A função st.sidebar.markdown("""---""") vai determinar uma linha de separação
