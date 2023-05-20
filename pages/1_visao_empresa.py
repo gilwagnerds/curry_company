@@ -217,16 +217,15 @@ st.sidebar.markdown( """---""" )                              # A função st.si
 
 # a função 'slider' cria um filtro p/escolha de uma data pelo usuário. Será pautada pela maior e menor data encontrados no df1
 
-st.sidebar.markdown( '## Selecione uma data limite' )
-date_slider = st.sidebar.slider(                              # Função slider retornará uma data que deve ser guardada em uma variável.
-      'Até qual valor?',
-      value=pd.datetime( 2022, 4, 13 ),                       # value recebe a data padrão quando o usuário não definir nenhuma data
-      min_value=pd.datetime( 2022, 2, 11 ),                   # Após consultado no df1, definimos a data minima para a consulta
-      max_value=pd.datetime( 2022, 6, 4 ),                    # Após consultado no df1, definimos a data máxima para a consulta
-      format='DD/MM/YYYY' )                                   # O format altera a forma em que a data será recebida e apresentada    
-#st.header( date_slider )                                     # A função st.header irá apresentar o valor da variável date_slider ao usuário
-st.sidebar.markdown( """---""" )                              # A função st.sidebar.markdown("""---""") vai determinar uma linha de separação
-
+st.sidebar.markdown('## Selecione uma data limite' )
+date_slider = st.sidebar.slider(                                         # Função slider retornará uma data que deve ser guardada em uma variável.
+      'Até qual valor?',                                                 # Usamos pd.to_datetime p/definir a data -.to_pydatetime() p/chamar função no PY
+      value=pd.to_datetime('2022, 4, 13').to_pydatetime(),               # value recebe a data padrão quando o usuário não definir nenhuma data
+      min_value=pd.to_datetime('2022, 2, 11').to_pydatetime(),           # Após consultado no df1, definimos a data minima para a consulta
+      max_value=pd.to_datetime('2022, 6, 4').to_pydatetime(),            # Após consultado no df1, definimos a data máxima para a consulta
+      format='DD-MM-YYYY')                                               # O format altera a forma em que a data será recebida e apresentada    
+#st.header( date_slider )                                                # A função st.header irá apresentar o valor da variável date_slider ao usuário
+st.sidebar.markdown( """---""" )                                         # A função st.sidebar.markdown("""---""") vai determinar uma linha de separação
 
 # a função 'multiselect' cria um filtro multiseleção p/o template 
 
